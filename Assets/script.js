@@ -111,9 +111,9 @@ function pastPresentFuture() {
     
         console.log(theHour)
 
-for (let i = 0; i < 24; i++) {
+for (let i = 0; i < 9; i++) {
 
-    var hour = moment().set("hour", (i+24)).format("ha");
+    var hour = moment().set("hour", (i+9)).format("ha");
 console.log(hour);
             if (hour < theHour) {
                 $(this).removeClass("future");
@@ -155,6 +155,7 @@ function getItems() {
 
 //DOM traversal
 //.attr get attribute
+
 
 //if statements for buttons
 //reference dateTime button for colors? Change the style with past, present, future for class
