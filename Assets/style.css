@@ -6,11 +6,13 @@ body {
 
 textarea {
     background: transparent;
-    border: none;
+    border: 2px black solid;
     resize: none;
     color: #000000;
     border-left: 1px solid black;
-    padding: 10px;
+    /* padding: 10px; */
+    width: 100%;
+    height: 100%;
 }
 
 .jumbotron {
@@ -68,4 +70,14 @@ textarea {
 .saveBtn i:hover {
     font-size: 20px;
     transition: all 0.3s ease-in-out;
+}
+
+.datacol {
+    height: 100% !important;
+    /* text-align: center !important; */
+} 
+input {
+    width: 100%;
+    padding: 8px;
+    /* position: relative; */
 }

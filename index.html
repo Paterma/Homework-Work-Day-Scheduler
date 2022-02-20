@@ -20,7 +20,7 @@ href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
 rel="stylesheet"
     />
     <link rel="stylesheet" href="Assets/style.css" />
-    <title>Work Day Scheduler</title>
+    <title class="header">Work Day Scheduler</title>
 </head>
 
 <body>
@@ -30,11 +30,92 @@ rel="stylesheet"
     <p id="currentDay" class="lead"></p>
     </header>
     <div class="container">
+        <div>
+            <div class="row align-items-start time-block">
+              <div class="col-2 datacol hour">
+                9:00 a.m.
+              </div>
+                <textarea class="col-8" name="" id="input1"></textarea>
+              <button id="btn1" type="button" class="btn btn-primary col-2 datacol saveBtn"><i class="fas fa-save"></i></button>
+              <div class="col-2 datacol">
+              </div>
+            </div>
+            <div class="row align-items-center time-block">
+              <div class="col-2 datacol hour">
+                10:00 a.m.
+              </div>
+              <textarea class="col-8" name="" id="input2"></textarea>
+              <button id="btn2" type="button" class="btn btn-primary col-2 datacol saveBtn"><i class="fas fa-save"></i></button>
+              <div class="col-2 datacol">
+              </div>
+            </div>
+            <div class="row align-items-end time-block">
+              <div class="col-2 datacol hour">
+              11:00 a.m.
+              </div>
+              <textarea class="col-8" name="" id="input3"></textarea>
+              <button id="btn3" type="button" class="btn btn-primary col-2 datacol saveBtn"><i class="fas fa-save"></i></button>
+              <div class="col-2 datacol">
+              </div>
+            </div>
+            <div class="row align-items-start time-block">
+              <div class="col-2 datacol hour">
+                12:00 p.m.
+                </div>
+                <textarea class="col-8" name="" id="input4"></textarea>
+                <button id="btn4" type="button" class="btn btn-primary col-2 datacol saveBtn"><i class="fas fa-save"></i></button>
+              </div>
+              <div class="row align-items-center time-block">
+                <div class="col-2 datacol hour">
+                  1:00 p.m.
+                </div>
+                <textarea class="col-8" name="" id="input5"></textarea>
+                <button id="btn5" type="button" class="btn btn-primary col-2 datacol saveBtn"><i class="fas fa-save"></i></button>
+                <div class="col-2 datacol">
+                </div>
+              </div>
+              <div class="row align-items-end time-block">
+                <div class="col-2 datacol hour">
+                  2:00 p.m.
+                </div>
+                <textarea class="col-8" name="" id="input6"></textarea>
+                <button id="btn6" type="button" class="btn btn-primary col-2 datacol saveBtn"><i class="fas fa-save"></i></button>
+                <div class="col-2 datacol">
+                </div>
+              </div>
+              <div class="row align-items-start time-block">
+                <div class="col-2 datacol hour">
+                  3:00 p.m.
+                </div>
+                <textarea class="col-8" name="" id="input7"></textarea>
+                <button id="btn7" type="button" class="btn btn-primary col-2 datacol saveBtn"><i class="fas fa-save"></i></button>
+                <div class="col-2 datacol">
+                </div>
+              </div>
+              <div class="row align-items-center time-block">
+                <div class="col-2 datacol hour">
+                  4:00 p.m.
+                </div>
+                <textarea class="col-8" name="" id="input8"></textarea>
+                <button id="btn8" type="button" class="btn btn-primary col-2 datacol saveBtn"><i class="fas fa-save"></i></button>
+                <div class="col-2 datacol">
+                </div>
+              </div>
+              <div class="row align-items-end time-block">
+                <div class="col-2 datacol hour">
+                  5:00 p.m.
+                </div>
+                <textarea class="col-8" name="" id="input9"></textarea>
+                <button id="btn9" type="button" class="btn btn-primary col-2 datacol saveBtn"><i class="fas fa-save"></i></button>
+          </div>
+          
+          
 <!-- Timeblocks go here -->
 <!-- Do this in the indexhtml -->
     </div>
-
+  
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="Assets/script.js"></script>
 </body>
 </html>
