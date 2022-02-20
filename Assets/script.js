@@ -1,15 +1,15 @@
 $( document ).ready(function() { //So jquery will work
 
 //setting all my variables
-var btn1 = $("#btn1")
-var btn2 = $("#btn2")
-var btn3 = $("#btn3")
-var btn4 = $("#btn4")
-var btn5 = $("#btn5")
-var btn6 = $("#btn6")
-var btn7 = $("#btn7")
-var btn8 = $("#btn8")
-var btn9 = $("#btn9")
+// var btn1 = $("#btn1")
+// var btn2 = $("#btn2")
+// var btn3 = $("#btn3")
+// var btn4 = $("#btn4")
+// var btn5 = $("#btn5")
+// var btn6 = $("#btn6")
+// var btn7 = $("#btn7")
+// var btn8 = $("#btn8")
+// var btn9 = $("#btn9")
 var input1 = $("#input1")
 var input2 = $("#input2")
 var input3 = $("#input3")
@@ -23,13 +23,13 @@ var textarea = $("textarea")
 var currentDay = $("#currentDay")
 var container = $(".container")
 
-var inputSavedText= JSON.parse(localStorage.getItem("nineAM") || "{}");
-
+getItems(); //getting any saved items out of local storage on page load
 
 //adding moments for current date 
 var dateTime = moment().format("MMM Do YY");
 currentDay.append(dateTime) //appending the current day with moment date
 
+//all the save buttons will work on click and save the following inputs
 container.on("click", ".saveBtn", function (event) {
 console.log("saveBtn")
 
@@ -47,6 +47,8 @@ inputs9()
 
 //forEach- look up later
 
+
+//creating my fucntions to save my inputs to local storage
 function inputs() {
     var nineAM = input1.val()
 localStorage.setItem("nineAM", JSON.stringify(nineAM));
@@ -101,7 +103,7 @@ localStorage.setItem("fivePM", JSON.stringify(fivePm));
 }
 inputs9()
 
-
+//setting the time so the hours update colors for past/present/future
 function pastPresentFuture() {
     var theHour = moment().format("ha");
     
@@ -133,44 +135,26 @@ console.log(hour);
 }
 pastPresentFuture()
 
-$("input1").val(localStorage.getItem("input1"));
-$("input2 .description").val(localStorage.getItem("input2"));
-// var inputSavedText = JSON.parse(localStorage.getItem("inputSavedText") || "{}");
-
-// function init() {
-    
-//     var savedItem1= JSON.parse(localStorage.getItem("inputs"))
-//     if (savedItem1 !== null) {
-//     inputSavedText = Object.assign(savedItem1, nineAM)    
-//     } else {
-//         return;
-//     }
-// }
-// init();
-
+//Getting all the items out of local storage
+function getItems() {
+    $("#input1").text(JSON.parse(localStorage.getItem("nineAM")));
+    $("#input2").text(JSON.parse(localStorage.getItem("tenAM")));
+    $("#input3").text(JSON.parse(localStorage.getItem("elevenAM")));
+    $("#input4").text(JSON.parse(localStorage.getItem("twelvePM")));
+    $("#input5").text(JSON.parse(localStorage.getItem("onePM")));
+    $("#input6").text(JSON.parse(localStorage.getItem("twoPM")));
+    $("#input7").text(JSON.parse(localStorage.getItem("threePM")));
+    $("#input8").text(JSON.parse(localStorage.getItem("fourPM")));
+    $("#input9").text(JSON.parse(localStorage.getItem("fivePM")));
+    }
+// 
 
 });
 
 
 
-
 //DOM traversal
 //.attr get attribute
-
-// savedItems()
-// console.log(savedItems)
-
-
-
-// localStorage.setItem("savedItems")
-
-// function renderItems () {
-//     var 
-// }
-// localStorage.setItem("newItem", JSON.stringify(addedItem);
-// addedItem()
-
-
 
 //if statements for buttons
 //reference dateTime button for colors? Change the style with past, present, future for class
