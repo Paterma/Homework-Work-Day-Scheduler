@@ -109,9 +109,9 @@ function pastPresentFuture() {
     
         console.log(theHour)
 
-for (let i = 0; i < 9; i++) {
+for (let i = 0; i < 24; i++) {
 
-    var hour = moment().set("hour", (i+9)).format("ha");
+    var hour = moment().set("hour", (i+24)).format("ha");
 console.log(hour);
             if (hour < theHour) {
                 $(this).removeClass("future");
@@ -133,23 +133,27 @@ console.log(hour);
 }
 pastPresentFuture()
 
-var inputSavedText = JSON.parse(localStorage.getItem("inputSavedText") || "{}");
+$("input1").val(localStorage.getItem("input1"));
+$("input2 .description").val(localStorage.getItem("input2"));
+// var inputSavedText = JSON.parse(localStorage.getItem("inputSavedText") || "{}");
 
-function init() {
+// function init() {
     
-    var savedItem1= JSON.parse(localStorage.getItem("inputs"))
-    if (savedItem1 !== null) {
-    inputSavedText = Object.assign(savedItem1, nineAM)    
-    } else {
-        return;
-    }
-}
-init();
+//     var savedItem1= JSON.parse(localStorage.getItem("inputs"))
+//     if (savedItem1 !== null) {
+//     inputSavedText = Object.assign(savedItem1, nineAM)    
+//     } else {
+//         return;
+//     }
+// }
+// init();
 
 
 });
 
-// $("#hour8 .description").val(localStorage.getItem("hour8"));
+
+
+
 //DOM traversal
 //.attr get attribute
 
