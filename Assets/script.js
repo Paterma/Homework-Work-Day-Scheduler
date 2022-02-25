@@ -105,17 +105,20 @@ inputs9()
 
 //setting the time so the hours update colors for past/present/future
 function pastPresentFuture() {
-    var theHour = moment().format("ha");
-    
-    $("textarea").each(function() {
+    var theHour = moment().format();
+
+    $("textarea").each(function(i) {
     
         console.log(theHour)
 
-for (let i = 0; i < 9; i++) {
+// for (let i = 0; i < 9; i++) {
 
-    var hour = moment().set("hour", (i+9)).format("ha");
-console.log(hour);
+    var hour = moment().set("hour", (i+9)).format();
+        
+    console.log(hour);
+            
             if (hour < theHour) {
+                
                 $(this).removeClass("future");
                 $(this).removeClass("present");
                 $(this).addClass("past");
@@ -124,13 +127,12 @@ console.log(hour);
                 $(this).removeClass("past");
                 $(this).removeClass("future");
                 $(this).addClass("present");
-            } else {
+            } else if (hour > theHour) {
+                console.log(this)
                 $(this).removeClass("present");
                 $(this).removeClass("past");
                 $(this).addClass("future");
         }
-} 
-
     })    
 }
 pastPresentFuture()
@@ -152,6 +154,8 @@ function getItems() {
 });
 
 
+// $("hour").attr("data-hour") == 
+// moment().set("hour", (i+9)).format("ha");
 
 //DOM traversal
 //.attr get attribute

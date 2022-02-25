@@ -39,3 +39,5 @@ For this assignment I created a work day scheduler with normal business hours th
 * The URL of the deployed application-https://paterma.github.io/Homework-Work-Day-Scheduler/
 
 * The URL of the GitHub repository, with a unique name and a README describing the project-https://github.com/Paterma/Homework-Work-Day-Scheduler
+
+![Screenshot of Weather Dashboard](/Homework-Work-Day-Scheduler/Assets/Screenshot-Daily-Planner.PNG)
